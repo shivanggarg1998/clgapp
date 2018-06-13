@@ -1,0 +1,98 @@
+.hidden-form {
+    display: none;
+}
+.updateButton {
+    display: none;
+}
+th {
+  padding: 20px 15px;
+text-align: left;
+font-weight: 500;
+font-size: 12px;
+color: black;
+text-transform: uppercase;
+}
+td {
+  padding: 15px;
+text-align: left;
+vertical-align:middle;
+font-weight: 300;
+font-size: 12px;
+color: black;
+border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+.hidden-cell {
+    padding-left: 5px;
+    visibility: hidden;
+    border: none !important;
+}
+.button-div {
+    margin-top: 6%;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+iframe {
+    height: 382.5px;
+    width: 1200px;
+}
+.table-head {
+    margin-top: 7%;
+}
+.sno {
+    width: 70px;
+    height: 64px;
+    overflow: hidden;
+}
+.name {
+    width: 200px;
+    height: 64px;
+    overflow: hidden;
+}
+.user {
+    width: 180px;
+    height: 64px;
+    overflow: hidden;
+}
+.email {
+    width: 220px;
+    height: 64px;
+    overflow: hidden;
+}
+.rtg {
+    width: 100px;
+    height: 64px;
+    overflow: hidden;
+}
+.img {
+    width: 100px;
+    height: 64px;
+    overflow: hidden;
+}
+.auth {
+    width: 160px;
+    height: 64px;
+    overflow: hidden;
+}
+.table{
+    table-layout: fixed;
+}
+.table td{
+    overflow-x: auto;
+}
+.table-div {
+    min-width: 1200px;
+}
+.modal-backdrop {
+    background-color: white;
+    opacity: 0.1;
+}
