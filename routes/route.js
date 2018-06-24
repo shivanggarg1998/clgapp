@@ -8,7 +8,7 @@ router.get('/contacts',(req,res,next)=>{
   });
 });
 router.post('/contactk',(req,res,next)=>{
-  Contact.findOne({email : req.body.email},function(err,contacts){
+  Contact.findOne({username : req.body.username},function(err,contacts){
     if(contacts.password == md5(req.body.password))
     {
       res.json(contacts);
