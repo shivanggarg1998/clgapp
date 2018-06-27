@@ -37,8 +37,10 @@ onlogin()
     console.log(this.state.password);
     axios.post('http://localhost:4200/api/contactk',this.state).then(res =>{
           console.log(res);
-          this.props.telluser(res.data.username);
-          this.props.history.push('/dashboard');
+          this.props.history.push({
+              pathname : '/dashboard',
+            state : {details : res.data.username}
+        });
     })
     
 }
@@ -55,7 +57,7 @@ onchange(e)
       <div className="login container">
       { this.state.ok ? 
       <div className="form" id="register-form">
-          <div className="header">
+          <div className="login-head ">
               Register!
           </div>
           <form >
@@ -82,7 +84,7 @@ onchange(e)
       </div>
       :
       <div className="form" id="login-form">
-          <div className="header">
+          <div className="login-head">
               Login!
           </div>
            

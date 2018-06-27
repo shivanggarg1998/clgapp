@@ -18,20 +18,15 @@ class App extends Component {
 
  
 
-  changeauth(user)
-  {
-      this.setState({
-        isAuth : user
-      })
-  }
+  
 
   render() {
     return (
       
           <Router history={history}>
           <Switch>
-          <Route exact path='/dashboard' render={(props) => <DashBoard {...props} isAuthed={this.state.isAuth} />}/>
-          <Route exact path='/login' render={(props) => <Login {...props} telluser={this.changeauth.bind(this)} />} />
+          <Route exact path='/dashboard'  component={DashBoard} />
+          <Route exact path='/login' component={Login} />
        </Switch>
        </Router>
          
