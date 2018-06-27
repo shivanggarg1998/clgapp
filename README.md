@@ -13,5 +13,13 @@ $npm install<br>
 $cd ..<br>
 $npm run dev<br>
 
-and the web app will automatically open at localhost:3000
+and the web app will automatically open at localhost:3000<br>
+
+login using username : admin<br>
+            password : admin<br>
+            
+            
+you can create your account too!!            
+            
+            
 
