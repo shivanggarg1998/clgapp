@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Router, Switch, Route} from 'react-router-dom';
+import {Router, Switch, Route,Redirect} from 'react-router-dom';
 import Login from'./containers/login';
 import DashBoard from './containers/dashboard'
 import createHistory from 'history/createBrowserHistory'
@@ -25,9 +25,12 @@ class App extends Component {
       
           <Router history={history}>
           <Switch>
+          
           <Route exact path='/dashboard'  component={DashBoard} />
-          <Route exact path='/login' component={Login} />
+          <Route exact path='/' name="login" component={Login} />
+          
        </Switch>
+       
        </Router>
          
     );
