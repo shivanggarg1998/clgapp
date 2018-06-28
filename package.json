@@ -9,6 +9,9 @@
     "server": "node app.js",
     "start": "npm install && concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
+  "engines": {
+    "node": "8.11.1"
+  },
   "author": "shivang",
   "license": "ISC",
   "dependencies": {
