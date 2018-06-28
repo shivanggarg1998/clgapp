@@ -22,7 +22,7 @@ sign()
 }
 onsave()
 {
-    axios.post('http://localhost:4200/api/contact',this.state).then(res =>{
+    axios.post('/api/contact',this.state).then(res =>{
         console.log(res);
 
         this.setState({
@@ -35,7 +35,7 @@ onlogin()
 
 {
     console.log(this.state.password);
-    axios.post('http://localhost:4200/api/contactk',this.state).then(res =>{
+    axios.post('/api/contactk',this.state).then(res =>{
           console.log(res);
           this.props.history.push({
               pathname : '/dashboard',
