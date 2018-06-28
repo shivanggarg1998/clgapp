@@ -25,7 +25,8 @@ router.post('/contact',(req,res,next)=>{
         phone : req.body.phone,
         email : req.body.email,
         username : req.body.username,
-        password : md5(req.body.password)
+        password : md5(req.body.password),
+        notes : [],
     });
 
     newContact.save((err,contact)=>{

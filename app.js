@@ -46,10 +46,11 @@ app.use(bodyparser.json());
 app.use(express.static(path.join(__dirname,'public')));
 
 app.use('/api',route);
- //testing
- app.get('/',(req,res)=>{
-     res.send('foobar');
- });
+app.use(express.static(path.join(__dirname, "client", "build")))
+
+app.get("/", (req, res) => {  
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 app.listen(port,() => {
 console.log('Server started at port :'+port);
 

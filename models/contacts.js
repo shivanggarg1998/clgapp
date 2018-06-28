@@ -22,7 +22,10 @@ const ContactSchema = mongoose.Schema({
         type : String,
         required : true
     },
-    
+    notes :{
+        type : Array,
+        required : true,
+    }
 
 });
 
