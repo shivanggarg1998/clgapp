@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "cd client && npm install && npm run build",
+    "client": "cd client  && npm run build",
     "server": "node app.js",
-    "start": "npm install && concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "start": " concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "engines": {
     "node": "8.11.1"
@@ -27,6 +27,7 @@
     "nodemailer": "^4.6.7",
     "nodemon": "^1.17.5",
     "perfect-scrollbar": "^1.4.0",
+    "react-bootstrap": "^0.32.1",
     "react-router-dom": "^4.3.1",
     "yarn": "^1.7.0"
   }

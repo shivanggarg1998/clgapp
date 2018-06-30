@@ -9,6 +9,10 @@ router.get('/contacts',(req,res,next)=>{
 });
 router.post('/contactk',(req,res,next)=>{
   Contact.findOne({username : req.body.username},function(err,contacts){
+      if(contacts==null)
+      {
+        return res.json({msg : 'beta tu lot ja'});
+      }
     if(contacts.password == md5(req.body.password))
     {
       res.json(contacts);
