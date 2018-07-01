@@ -13,7 +13,6 @@ class Dashboard extends Component {
 
     return(
     <div>
-      {editor}
           <div className="sidebar">
         <div className="sidebar-inner">
                 <div className="sidebar-logo">
