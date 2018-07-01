@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import * as ace from 'brace';
+
+
+const editor = ace.edit('javascript-editor');
+
 class Dashboard extends Component {
   constructor(props)
   {
@@ -11,6 +16,7 @@ class Dashboard extends Component {
 
     return(
     <div>
+      {editor}
           <div className="sidebar">
         <div className="sidebar-inner">
                 <div className="sidebar-logo">

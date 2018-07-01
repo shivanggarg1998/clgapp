@@ -20,7 +20,8 @@
 }
 
 body  {
-     background-image: url("./test1.jpg"); 
+     background-image: url("./test1.jpg") ;
+     background-repeat : no-repeat; 
      
 }
 
