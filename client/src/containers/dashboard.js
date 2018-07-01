@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import * as ace from 'brace';
 
-
-const editor = ace.edit('javascript-editor');
 
 class Dashboard extends Component {
   constructor(props)
