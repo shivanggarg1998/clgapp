@@ -100,7 +100,7 @@ onchange(e)
           <div className="login-head ">
               Register!
           </div>
-          <form ref="registerform">
+          <form name="registerform">
               <div className="form-group">
                   <input name="first_name" type="text" className="form-control"  placeholder="First Name"  value={this.state.first_name} onChange={(e) => this.onchange(e)}  autoComplete="off" required />
               </div>
