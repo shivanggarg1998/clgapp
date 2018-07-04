@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import brace from 'brace';
+ 
+import 'brace/mode/java';
+import 'brace/theme/github';
 
 class Dashboard extends Component {
   constructor(props)
@@ -55,157 +58,18 @@ class Dashboard extends Component {
                 <span className="icon-holder">
                   <i className="c-brown-500 ti-email"></i>
                 </span>
-                <span className="title">Email</span>
+                <span className="title">Edit Profile</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className='sidebar-link' href="compose.html">
+              <a className='sidebar-link' href="email.html">
                 <span className="icon-holder">
-                  <i className="c-blue-500 ti-share"></i>
+                  <i className="c-brown-500 ti-email"></i>
                 </span>
-                <span className="title">Compose</span>
+                <span className="title">Classes</span>
               </a>
             </li>
-            <li className="nav-item">
-              <a className='sidebar-link' href="calendar.html">
-                <span className="icon-holder">
-                  <i className="c-deep-orange-500 ti-calendar"></i>
-                </span>
-                <span className="title">Calendar</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className='sidebar-link' href="chat.html">
-                <span className="icon-holder">
-                  <i className="c-deep-purple-500 ti-comment-alt"></i>
-                </span>
-                <span className="title">Chat</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className='sidebar-link' href="charts.html">
-                <span className="icon-holder">
-                  <i className="c-indigo-500 ti-bar-chart"></i>
-                </span>
-                <span className="title">Charts</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className='sidebar-link' href="forms.html">
-                <span className="icon-holder">
-                  <i className="c-light-blue-500 ti-pencil"></i>
-                </span>
-                <span className="title">Forms</span>
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="sidebar-link" href="ui.html">
-                <span className="icon-holder">
-                    <i className="c-pink-500 ti-palette"></i>
-                  </span>
-                <span className="title">UI Elements</span>
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="dropdown-toggle" href="javascript:void(0);">
-                <span className="icon-holder">
-                  <i className="c-orange-500 ti-layout-list-thumb"></i>
-                </span>
-                <span className="title">Tables</span>
-                <span className="arrow">
-                  <i className="ti-angle-right"></i>
-                </span>
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className='sidebar-link' href="basic-table.html">Basic Table</a>
-                </li>
-                <li>
-                  <a className='sidebar-link' href="datatable.html">Data Table</a>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="dropdown-toggle" href="javascript:void(0);">
-                <span className="icon-holder">
-                    <i className="c-purple-500 ti-map"></i>
-                  </span>
-                <span className="title">Maps</span>
-                <span className="arrow">
-                    <i className="ti-angle-right"></i>
-                  </span>
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a href="google-maps.html">Google Map</a>
-                </li>
-                <li>
-                  <a href="vector-maps.html">Vector Map</a>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="dropdown-toggle" href="javascript:void(0);">
-                <span className="icon-holder">
-                    <i className="c-red-500 ti-files"></i>
-                  </span>
-                <span className="title">Pages</span>
-                <span className="arrow">
-                    <i className="ti-angle-right"></i>
-                  </span>
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className='sidebar-link' href="blank.html">Blank</a>
-                </li>                 
-                <li>
-                  <a className='sidebar-link' href="404.html">404</a>
-                </li>
-                <li>
-                  <a className='sidebar-link' href="500.html">500</a>
-                </li>
-                <li>
-                  <a className='sidebar-link' href="signin.html">Sign In</a>
-                </li>
-                <li>
-                  <a className='sidebar-link' href="signup.html">Sign Up</a>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="dropdown-toggle" href="javascript:void(0);">
-                <span className="icon-holder">
-                  <i className="c-teal-500 ti-view-list-alt"></i>
-                </span>
-                <span className="title">Multiple Levels</span>
-                <span className="arrow">
-                  <i className="ti-angle-right"></i>
-                </span>
-              </a>
-              <ul className="dropdown-menu">
-                <li className="nav-item dropdown">
-                  <a href="javascript:void(0);">
-                    <span>Menu Item</span>
-                  </a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a href="javascript:void(0);">
-                    <span>Menu Item</span>
-                    <span className="arrow">
-                      <i className="ti-angle-right"></i>
-                    </span>
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a href="javascript:void(0);">Menu Item</a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);">Menu Item</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
+           
           </ul>
         </div>
       </div>
@@ -219,15 +83,6 @@ class Dashboard extends Component {
                 <a id='sidebar-toggle' className="sidebar-toggle" href="javascript:void(0);">
                   <i className="ti-menu"></i>
                 </a>
-              </li>
-              <li className="search-box">
-                <a className="search-toggle no-pdd-right" href="javascript:void(0);">
-                  <i className="search-icon ti-search pdd-right-10"></i>
-                  <i className="search-icon-close ti-close pdd-right-10"></i>
-                </a>
-              </li>
-              <li className="search-input">
-                <input className="form-control" type="text" placeholder="Search..."/>
               </li>
             </ul>
             <ul className="nav-right">
@@ -310,87 +165,6 @@ class Dashboard extends Component {
                   <i className="ti-email"></i>
                 </a>
 
-                <ul className="dropdown-menu">
-                  <li className="pX-20 pY-15 bdB">
-                    <i className="ti-email pR-10"></i>
-                    <span className="fsz-sm fw-600 c-grey-900">Emails</span>
-                  </li>
-                  <li>
-                    <ul className="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
-                      <li>
-                        <a href="" className='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
-                          <div className="peer mR-15">
-                            <img className="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/1.jpg" alt=""/>
-                          </div>
-                          <div className="peer peer-greed">
-                            <div>
-                              <div className="peers jc-sb fxw-nw mB-5">
-                                <div className="peer">
-                                  <p className="fw-500 mB-0">John Doe</p>
-                                </div>
-                                <div className="peer">
-                                  <small className="fsz-xs">5 mins ago</small>
-                                </div>
-                              </div>
-                              <span className="c-grey-600 fsz-sm">
-                                Want to create your own customized data generator for your app...
-                              </span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="" className='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
-                          <div className="peer mR-15">
-                            <img className="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/2.jpg" alt=""/>
-                          </div>
-                          <div className="peer peer-greed">
-                            <div>
-                              <div className="peers jc-sb fxw-nw mB-5">
-                                <div className="peer">
-                                  <p className="fw-500 mB-0">Moo Doe</p>
-                                </div>
-                                <div className="peer">
-                                  <small className="fsz-xs">15 mins ago</small>
-                                </div>
-                              </div>
-                              <span className="c-grey-600 fsz-sm">
-                                Want to create your own customized data generator for your app...
-                              </span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="" className='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
-                          <div className="peer mR-15">
-                            <img className="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/3.jpg" alt=""/>
-                          </div>
-                          <div className="peer peer-greed">
-                            <div>
-                              <div className="peers jc-sb fxw-nw mB-5">
-                                <div className="peer">
-                                  <p className="fw-500 mB-0">Lee Doe</p>
-                                </div>
-                                <div className="peer">
-                                  <small className="fsz-xs">25 mins ago</small>
-                                </div>
-                              </div>
-                              <span className="c-grey-600 fsz-sm">
-                                Want to create your own customized data generator for your app...
-                              </span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="pX-20 pY-15 ta-c bdT">
-                    <span>
-                      <a href="email.html" className="c-grey-600 cH-blue fsz-sm td-n">View All Email <i className="fs-xs ti-angle-right mL-10"></i></a>
-                    </span>
-                  </li>
-                </ul>
               </li>
               <li className="dropdown">
                 <a href="" className="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
@@ -402,25 +176,6 @@ class Dashboard extends Component {
                   </div>
                 </a>
                 <ul className="dropdown-menu fsz-sm">
-                  <li>
-                    <a href="" className="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-                      <i className="ti-settings mR-10"></i>
-                      <span>Setting</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" className="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-                      <i className="ti-user mR-10"></i>
-                      <span>Profile</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="email.html" className="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-                      <i className="ti-email mR-10"></i>
-                      <span>Messages</span>
-                    </a>
-                  </li>
-                  <li role="separator" className="divider"></li>
                   <li>
                     <a href="" className="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                       <i className="ti-power-off mR-10"></i>
@@ -439,36 +194,23 @@ class Dashboard extends Component {
             <div className="row gap-20 masonry pos-r">
               <div className="masonry-item col-md-6">
                 
-                <div className="bd bgc-white">
-                  <div className="layers">
-                    <div className="layer w-100 pX-20 pT-20">
-                      <h6 className="lh-1">Monthly Stats</h6>
-                    </div>
-                    <div className="layer w-100 p-20">
-                      <canvas id="line-chart" height="220"></canvas>
-                    </div>
-                    <div className="layer bdT p-20 w-100">
-                      <div className="peers ai-c jc-c gapX-20">
-                        <div className="peer">
-                          <span className="fsz-def fw-600 mR-10 c-grey-800">10% <i className="fa fa-level-up c-green-500"></i></span>
-                          <small className="c-grey-500 fw-600">APPL</small>
-                        </div>
-                        <div className="peer fw-600">
-                          <span className="fsz-def fw-600 mR-10 c-grey-800">2% <i className="fa fa-level-down c-red-500"></i></span>
-                          <small className="c-grey-500 fw-600">Average</small>
-                        </div>
-                        <div className="peer fw-600">
-                          <span className="fsz-def fw-600 mR-10 c-grey-800">15% <i className="fa fa-level-up c-green-500"></i></span>
-                          <small className="c-grey-500 fw-600">Sales</small>
-                        </div>
-                        <div className="peer fw-600">
-                          <span className="fsz-def fw-600 mR-10 c-grey-800">8% <i className="fa fa-level-down c-red-500"></i></span>
-                          <small className="c-grey-500 fw-600">Profit</small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
+              <ul class="pages">
+    <li class="chat page">
+      <div class="chatArea">
+        <ul class="messages"></ul>
+      </div>
+      <input class="inputMessage" placeholder="Type here..."/>
+    </li>
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">What's your nickname?</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+      </div>
+    </li>
+  </ul>
+
+                
               </div>
               <div className="masonry-item col-md-6">
                 

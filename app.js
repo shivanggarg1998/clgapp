@@ -4,9 +4,23 @@ var mongoose = require('mongoose');
 var bodyparser = require('body-parser');
 var cors = require('cors');
 var app = express();
+const http = require('http');
 var path = require('path');
-
+const socketIO = require('socket.io')
 const route = require('./routes/route');
+
+const server = http.createServer(app)
+
+// This creates our socket using the instance of the server
+const io = socketIO(server)
+
+io.on('connection', (socket) => {
+    console.log(socket.id);
+
+    socket.on('SEND_MESSAGE', function(data){
+        io.emit('RECEIVE_MESSAGE', data);
+    })
+});
 //connect to mongoose db
 mongoose.connect('mongodb://shiv:shiv123@ds018168.mlab.com:18168/connectus');
 //on connected
@@ -51,6 +65,7 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 app.get("*", (req, res) => {  
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
     res.sendFile(path.join(__dirname+'/client/build/css/login.css'));;
+    res.sendFile(path.join(__dirname+'/client/build/scripts/index.js'));;
 });
 app.listen(process.env.PORT || port,() => {
 console.log('Server started at port :'+port);
