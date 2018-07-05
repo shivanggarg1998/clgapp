@@ -13,7 +13,7 @@ $npm install && npm run heroku-postbuild<br>
 $cd ..<br>
 $npm start<br>
 
-and the web app will automatically open at localhost:3000<br>
+and the web app will automatically open at localhost:4200<br>
 
 login using username : admin<br>
             password : admin<br>
