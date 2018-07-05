@@ -9,9 +9,9 @@ start cmd and cd to directory of project
 
 $npm install<br>
 $cd client<br>
-$npm install<br>
+$npm install && npm run heroku-postbuild<br>
 $cd ..<br>
-$npm run dev<br>
+$npm start<br>
 
 and the web app will automatically open at localhost:3000<br>
 
